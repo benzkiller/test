@@ -6,7 +6,7 @@ from modules.core.controller import KettleController
 from modules.core.props import Property
 
 @cbpi.controller
-class PIDArduino(KettleController):
+class PIDArduino2(KettleController):
 
     a_p = Property.Number("P", True, 0)
     b_i = Property.Number("I", True, 0)
@@ -43,7 +43,7 @@ class PIDArduino(KettleController):
                 self.sleep(wait_time)
 # Based on Arduino PID Library
 # See https://github.com/br3ttb/Arduino-PID-Library
-class PIDArduino(object):
+class PIDArduino2(object):
 
     def __init__(self, sampleTimeSec, kp, ki, kd, outputMin=float('-inf'),
                  outputMax=float('inf'), getTimeMs=None):
